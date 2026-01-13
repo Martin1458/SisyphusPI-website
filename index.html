@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SisyphusPI Project Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 2rem; background: #0b1021; color: #f5f5f5; }
+    h1, h2, h3 { color: #f5f5f5; }
+    .card { background: #161b33; border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 0 0 1px #222a4d; }
+    .metrics { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .metric { flex: 1 1 160px; padding: 0.75rem 1rem; border-radius: 6px; background: #1f2645; }
+    .metric-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: .08em; opacity: 0.7; }
+    .metric-value { font-size: 1.3rem; margin-top: 0.25rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 0.75rem; font-size: 0.9rem; }
+    th, td { padding: 0.4rem 0.6rem; text-align: right; border-bottom: 1px solid #242a4a; }
+    th { text-align: right; background: #171d37; position: sticky; top: 0; z-index: 1; }
+    th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+    tbody tr:nth-child(even) { background: #14192f; }
+    a, a:visited { color: #7bd7ff; }
+    canvas { max-width: 100%; background: #0b1021; }
+    .table-wrapper { max-height: 400px; overflow: auto; border-radius: 6px; border: 1px solid #242a4a; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>SisyphusPI – All Projects Overview</h1>
+
+  <div class="card">
+    <h2>Summary</h2>
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-label">Projects</div>
+        <div class="metric-value">8</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">(wd, lr) Combos</div>
+        <div class="metric-value">15</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Total Sacrifices</div>
+        <div class="metric-value">90</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Total Grokked</div>
+        <div class="metric-value">0</div>
+      </div>
+    </div>
+    <p>Projects seen: 1_0, 25, 26, 27, 28, 29, 30, default_project</p>
+  </div>
+
+  <div class="card">
+    <h2>Grokked Rate per (weight_decay, learning_rate)</h2>
+    <canvas id="comboChart" height="120"></canvas>
+  </div>
+
+  <div class="card">
+    <h2>Raw Combination Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>weight_decay</th>
+            <th>learning_rate</th>
+            <th>num_of_sacrifices</th>
+            <th>num_of_grokked</th>
+            <th>grok_rate %</th>
+            <th>avg_train_time s</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>0_01</td><td>0_0001</td><td>6</td><td>0</td><td>0.0</td><td>2.26</td></tr>
+          <tr><td>0_1</td><td>0_0001</td><td>6</td><td>0</td><td>0.0</td><td>2.29</td></tr>
+          <tr><td>0_1</td><td>0_0005</td><td>6</td><td>0</td><td>0.0</td><td>2.16</td></tr>
+          <tr><td>0_1</td><td>0_001</td><td>6</td><td>0</td><td>0.0</td><td>2.29</td></tr>
+          <tr><td>0_1</td><td>0_005</td><td>6</td><td>0</td><td>0.0</td><td>2.67</td></tr>
+          <tr><td>0_1</td><td>0_01</td><td>6</td><td>0</td><td>0.0</td><td>5.12</td></tr>
+          <tr><td>0_1</td><td>0_05</td><td>6</td><td>0</td><td>0.0</td><td>3.63</td></tr>
+          <tr><td>0_1</td><td>0_1</td><td>6</td><td>0</td><td>0.0</td><td>3.43</td></tr>
+          <tr><td>1_0</td><td>0_0001</td><td>6</td><td>0</td><td>0.0</td><td>1.73</td></tr>
+          <tr><td>1_0</td><td>0_0005</td><td>6</td><td>0</td><td>0.0</td><td>1.71</td></tr>
+          <tr><td>1_0</td><td>0_001</td><td>6</td><td>0</td><td>0.0</td><td>1.70</td></tr>
+          <tr><td>1_0</td><td>0_005</td><td>6</td><td>0</td><td>0.0</td><td>2.10</td></tr>
+          <tr><td>1_0</td><td>0_01</td><td>6</td><td>0</td><td>0.0</td><td>3.69</td></tr>
+          <tr><td>1_0</td><td>0_05</td><td>6</td><td>0</td><td>0.0</td><td>2.70</td></tr>
+          <tr><td>1_0</td><td>0_1</td><td>6</td><td>0</td><td>0.0</td><td>2.76</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script id="all-projects-data" type="application/json">{"projects": ["1_0", "25", "26", "27", "28", "29", "30", "default_project"], "combinations": {"0_01": {"0_0001": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.26071716666623}}, "0_1": {"0_0001": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.2897308666664076}, "0_0005": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.1580840833336574}, "0_001": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.285916916666186}, "0_005": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.670425083333612}, "0_01": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 5.1156377166659395}, "0_05": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 3.6268879666671032}, "0_1": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 3.425250500000099}}, "1_0": {"0_0001": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 1.732749483333464}, "0_0005": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 1.7059549666670744}, "0_001": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 1.6963588833332324}, "0_005": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.1005966333329225}, "0_01": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 3.689034849999795}, "0_05": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.701823783333263}, "0_1": {"num_of_sacrifices": 6, "num_of_grokked": 0, "avg_train_time": 2.762397950000377}}}}</script>
+  <script>
+    (function() {
+      const script = document.getElementById('all-projects-data');
+      if (!script) return;
+      const data = JSON.parse(script.textContent || '{}');
+      const combos = data.combinations || {};
+
+      const labels = [];
+      const grokRates = [];
+
+      for (const [wd, lrDict] of Object.entries(combos)) {
+        for (const [lr, stats] of Object.entries(lrDict)) {
+          const numSac = stats.num_of_sacrifices || 0;
+          const numGrok = stats.num_of_grokked || 0;
+          const rate = numSac > 0 ? (numGrok / numSac * 100.0) : 0.0;
+          labels.push(`${wd} / ${lr}`);
+          grokRates.push(rate);
+        }
+      }
+
+      const ctx = document.getElementById('comboChart').getContext('2d');
+      // eslint-disable-next-line no-undef
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            label: 'Grokked %',
+            data: grokRates,
+            backgroundColor: 'rgba(123, 215, 255, 0.4)',
+            borderColor: 'rgba(123, 215, 255, 1.0)',
+            borderWidth: 1,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          animation: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              title: { display: true, text: 'Grokked %' },
+            },
+            x: {
+              ticks: { autoSkip: true, maxTicksLimit: 12 },
+            },
+          },
+        },
+      });
+    })();
+  </script>
+</body>
+</html>
