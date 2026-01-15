@@ -25,6 +25,42 @@ h1, h2, h3 {
     box-shadow: 0 0 0 1px #222a4d;
 }
 
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #222a4d;
+}
+
+.tab-button {
+    border: none;
+    background: transparent;
+    color: #d0d4ff;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    font: inherit;
+    border-radius: 6px 6px 0 0;
+    opacity: 0.7;
+}
+
+.tab-button:hover {
+    opacity: 1;
+}
+
+.tab-button.active {
+    background: #161b33;
+    box-shadow: 0 -1px 0 #222a4d;
+    opacity: 1;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
 .metrics {
     display: flex;
     flex-wrap: wrap;
@@ -93,5 +129,14 @@ canvas {
     max-height: 400px;
     overflow: auto;
     border-radius: 6px;
+    border: 1px solid #242a4a;
+}
+
+select {
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    background: #0b1021;
+    color: #f5f5f5;
+    border-radius: 4px;
     border: 1px solid #242a4a;
 }
