@@ -30,11 +30,11 @@
                 </div>
                 <div class="metric">
                     <div class="metric-label">Total Sacrifices</div>
-                    <div class="metric-value">455</div>
+                    <div class="metric-value">465</div>
                 </div>
                 <div class="metric">
                     <div class="metric-label">Total Grokked</div>
-                    <div class="metric-value">410</div>
+                    <div class="metric-value">420</div>
                 </div>
             </div>
             <p>Projects: project_1, test1</p>
@@ -64,7 +64,7 @@
           <tr><td>1_0</td><td>0_001</td><td>40</td><td>40</td><td>100.0</td><td>1335.11</td></tr>
           <tr><td>1_0</td><td>0_0001</td><td>38</td><td>0</td><td>0.0</td><td>2073.71</td></tr>
           <tr><td>1_0</td><td>0_0005</td><td>287</td><td>285</td><td>99.3</td><td>2161.34</td></tr>
-          <tr><td>0_1</td><td>0_01</td><td>10</td><td>9</td><td>90.0</td><td>765.06</td></tr>
+          <tr><td>0_1</td><td>0_01</td><td>20</td><td>19</td><td>95.0</td><td>1032.83</td></tr>
           <tr><td>0_1</td><td>0_001</td><td>40</td><td>37</td><td>92.5</td><td>2598.09</td></tr>
         </tbody>
                 </table>
@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <script id="all-projects-data" type="application/json">{"projects": ["project_1", "test1"], "combinations": {"1_0": {"0_01": {"num_of_sacrifices": 40, "num_of_grokked": 39, "avg_train_time": 403.5029109774739}, "0_001": {"num_of_sacrifices": 40, "num_of_grokked": 40, "avg_train_time": 1335.1105337770773}, "0_0001": {"num_of_sacrifices": 38, "num_of_grokked": 0, "avg_train_time": 2073.714276200184}, "0_0005": {"num_of_sacrifices": 287, "num_of_grokked": 285, "avg_train_time": 2161.3397473925047}}, "0_1": {"0_01": {"num_of_sacrifices": 10, "num_of_grokked": 9, "avg_train_time": 765.0619614311086}, "0_001": {"num_of_sacrifices": 40, "num_of_grokked": 37, "avg_train_time": 2598.0925809914793}}}, "project_details": {"project_1": {"num_of_sacrifices": 130, "num_of_grokked": 125, "weight_decay": {"1_0": {"num_of_sacrifices": 80, "num_of_grokked": 79, "avg_train_time": 869.3067223772758}, "0_1": {"num_of_sacrifices": 50, "num_of_grokked": 46, "avg_train_time": 2231.4864570794043}}, "learning_rate": {"0_01": {"num_of_sacrifices": 50, "num_of_grokked": 48, "avg_train_time": 475.8147210682008}, "0_001": {"num_of_sacrifices": 80, "num_of_grokked": 77, "avg_train_time": 1966.6015573842783}}}, "test1": {"num_of_sacrifices": 326, "num_of_grokked": 285, "weight_decay": {"1_0": {"num_of_sacrifices": 325, "num_of_grokked": 285, "avg_train_time": 2151.094307683865}}, "learning_rate": {"0_0001": {"num_of_sacrifices": 38, "num_of_grokked": 0, "avg_train_time": 2073.714276200184}, "0_0005": {"num_of_sacrifices": 287, "num_of_grokked": 285, "avg_train_time": 2161.3397473925047}}}}}</script>
+    <script id="all-projects-data" type="application/json">{"projects": ["project_1", "test1"], "combinations": {"1_0": {"0_01": {"num_of_sacrifices": 40, "num_of_grokked": 39, "avg_train_time": 403.5029109774739}, "0_001": {"num_of_sacrifices": 40, "num_of_grokked": 40, "avg_train_time": 1335.1105337770773}, "0_0001": {"num_of_sacrifices": 38, "num_of_grokked": 0, "avg_train_time": 2073.714276200184}, "0_0005": {"num_of_sacrifices": 287, "num_of_grokked": 285, "avg_train_time": 2161.3397473925047}}, "0_1": {"0_01": {"num_of_sacrifices": 20, "num_of_grokked": 19, "avg_train_time": 1032.8346252559538}, "0_001": {"num_of_sacrifices": 40, "num_of_grokked": 37, "avg_train_time": 2598.0925809914793}}}, "project_details": {"project_1": {"num_of_sacrifices": 140, "num_of_grokked": 135, "weight_decay": {"1_0": {"num_of_sacrifices": 80, "num_of_grokked": 79, "avg_train_time": 869.3067223772758}, "0_1": {"num_of_sacrifices": 60, "num_of_grokked": 56, "avg_train_time": 2076.3399290796374}}, "learning_rate": {"0_01": {"num_of_sacrifices": 60, "num_of_grokked": 58, "avg_train_time": 613.2801490703006}, "0_001": {"num_of_sacrifices": 80, "num_of_grokked": 77, "avg_train_time": 1966.6015573842783}}}, "test1": {"num_of_sacrifices": 326, "num_of_grokked": 285, "weight_decay": {"1_0": {"num_of_sacrifices": 325, "num_of_grokked": 285, "avg_train_time": 2151.094307683865}}, "learning_rate": {"0_0001": {"num_of_sacrifices": 38, "num_of_grokked": 0, "avg_train_time": 2073.714276200184}, "0_0005": {"num_of_sacrifices": 287, "num_of_grokked": 285, "avg_train_time": 2161.3397473925047}}}}}</script>
     <script>
         (function() {
             const script = document.getElementById('all-projects-data');
