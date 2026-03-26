@@ -141,6 +141,35 @@ select {
     border: 1px solid #242a4a;
 }
 
+.card-hint {
+    font-size: 0.82rem;
+    opacity: 0.5;
+    margin: -0.25rem 0 0.75rem;
+}
+
+/* Heatmap */
+.heatmap-table {
+    border-collapse: separate;
+    border-spacing: 3px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.heatmap-table th,
+.heatmap-table td {
+    border: none;
+    text-align: center;
+    padding: 0.45rem 0.7rem;
+    white-space: nowrap;
+}
+
+.heatmap-table thead th {
+    background: transparent;
+    opacity: 0.6;
+    font-size: 0.78rem;
+    position: static;
+}
+
 /* Project hero */
 .project-hero {
     text-align: center;
