@@ -140,3 +140,75 @@ select {
     border-radius: 4px;
     border: 1px solid #242a4a;
 }
+
+/* Project hero */
+.project-hero {
+    text-align: center;
+    padding: 2rem 1.5rem 1.5rem;
+    border: 1px solid #2d3a6e;
+    background: linear-gradient(160deg, #111830 0%, #161b33 100%);
+}
+
+.project-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: #a0b8ff;
+}
+
+.project-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.6;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
+    font-family: monospace;
+    letter-spacing: .05em;
+}
+
+.ai-counter {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #7bd7ff;
+    letter-spacing: -.02em;
+    font-variant-numeric: tabular-nums;
+}
+
+.ai-counter-total {
+    font-size: 2.5rem;
+    color: #4a6080;
+    font-weight: 600;
+}
+
+.ai-counter-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    opacity: 0.5;
+    margin-top: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar-track {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 12px;
+    background: #1f2645;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3a7bd5, #7bd7ff);
+    border-radius: 999px;
+    transition: width 0.6s ease;
+    min-width: 2px;
+}
+
+.progress-bar-label {
+    font-size: 0.8rem;
+    opacity: 0.55;
+    margin-top: 0.6rem;
+}
