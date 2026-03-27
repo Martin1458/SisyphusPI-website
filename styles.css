@@ -241,3 +241,28 @@ select {
     opacity: 0.55;
     margin-top: 0.6rem;
 }
+
+.eta-row {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 1.25rem;
+}
+
+.eta-block {
+    text-align: center;
+}
+
+.eta-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    opacity: 0.45;
+}
+
+.eta-value {
+    font-size: 1.15rem;
+    font-variant-numeric: tabular-nums;
+    color: #a0b8ff;
+    margin-top: 0.15rem;
+}
